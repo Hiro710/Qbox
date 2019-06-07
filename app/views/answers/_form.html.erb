@@ -1,0 +1,36 @@
+<%= form_with(model: answer, local: true) do |form| %>
+  <% if answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field-hidden">
+    <%= form.label :question_id %>
+    <%= form.number_field :question_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録", data:{confirm:'登録してもいいですか？',disable_with:'処理中...'}, class: 'new-question button is-primary' %>
+
+    <div class="back">
+      <%= link_to '戻る', "/questions/#{@answer.question_id}", class: 'new-question button is-link is-outlined' %>
+    </div>
+  </div>
+<% end %>

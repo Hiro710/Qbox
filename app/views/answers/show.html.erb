@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>回答の詳細</h1>
+<p>
+  <strong>Question:</strong>
+  <%= @answer.question_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @answer.content %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @answer.name %>
+</p>
+
+<%= link_to '編集', edit_answer_path(@answer), class: 'button is-link is-outlined' %>
+<%= link_to '戻る', answers_path, class: 'button' %>

@@ -1,0 +1,160 @@
+@import "bulma";
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+tbody {
+  font-size: 20px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 30px 0px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+thead {
+  font-size: 20px;
+}
+
+.new-question {
+  font-size: 20px;
+  margin: 20px 0px;
+}
+
+.field, p .content,p .q_name, span {
+  font-size: 15px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding: 15px 5px;
+}
+
+td {
+  padding: 0 7px 10px;
+  font-size: 16px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+.data {
+  background-color: #FFE4B5;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.data-raw {
+  font-size: 17px;
+}
+
+.boarder {
+  background-color: #AFEEEE;
+  border-radius: 5px;
+}
+
+.board {
+  font-size: 17px;
+  padding: 5px 5px;
+  margin: 8px;
+}
+
+.q_title {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+  margin: 3px;
+}
+
+.back {
+  float: left;
+  padding-right: 5px;
+}
+
+.field-hidden {
+  display: none;
+}
+
+.go-home {
+  float: right;
+  margin: 20px 0px;
+  .sub-go-home {
+    height: 40px;
+    font-size: 20px;
+  }
+}

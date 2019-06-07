@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="go-home">
+  <%= link_to 'ホームに戻る', questions_path, class: 'sub-go-home button is-link' %>
+</div>
+
+<h1>質問と回答</h1>
+
+<div class="question boarder">
+  <ol>
+  <p class="q_title"><%= @question.title %></p>
+  <p class="board"><%= @question.content %></p>
+  <p class="board"><%= @question.name %></p>
+  <span class="<%= @question.finished ? 'finished' : 'not_finished' %>">
+    <p class="board"><%= @question.finished ? '終了' : '受付中' %></p>
+  </span>
+  </ol>
+</div>
+
+<br>
+
+<% if @question.finished? == false %>
+  <div class="answer_form">
+    <h2>回答欄</h2>
+    <br>
+    <%= render 'form2', answer: @answer %>
+  </div>
+<% end %>
+
+<h2>これまでに寄せられた回答</h2>
+
+<br>
+
+<div class="content">
+  <% if @question.answer.count == 0 %>
+    <ol class="data">
+      <p class="data-raw">回答はまだありません</p>
+    </ol>
+  <% else %>
+    <!--reverse_eachで最新の投稿が一番上に来る様に表示-->
+    <% @question.answer.reverse_each do |r| %>
+      <ol class="data">
+        <p class="data-raw"><%= r.content + '（' + r.name + '）' %></p>
+      </ol>
+    <% end %>
+  <% end %>
+</div>

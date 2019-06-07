@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>質問Box</h1>
+
+<table  class="qlist table is-hoverable is-striped">
+  <thead>
+    <tr>
+      <th class="has-text-justified">Title</th>
+      <th class="has-text-justified">Finished</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= question.finished ? '終了' : '受付中' %></td>
+        <td><%= link_to '詳細', question, class: 'button is-link is-outlined' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '質問の作成', new_question_path, class: 'new-question button is-primary is-outlined'%>
