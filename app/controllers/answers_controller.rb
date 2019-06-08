@@ -24,7 +24,7 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    sleep 2.5
+    sleep 2.0
 
     end_counter = 10 # 受け付ける回答数
     @answer = Answer.new(answer_params)
@@ -51,7 +51,7 @@ class AnswersController < ApplicationController
   # PATCH/PUT /answers/1
   # PATCH/PUT /answers/1.json
   def update
-    sleep 2.5
+    sleep 2.0
   end
 
   # DELETE /answers/1

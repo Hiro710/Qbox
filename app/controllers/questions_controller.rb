@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.json
   def create
-    sleep 2.5
+    sleep 2.0
 
     @question = Question.new(question_params)
 
@@ -46,7 +46,7 @@ class QuestionsController < ApplicationController
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
   def update
-    sleep 2.5
+    sleep 2.0
   end
 
   # DELETE /questions/1
